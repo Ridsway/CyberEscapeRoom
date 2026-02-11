@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Escape Room</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <header class="cyber-header">
+        <div class="logo-container">
+            <div class="logo-icon">[ Ξ ]</div>
+            <div class="logo-text">CYBER ESCAPE ROOM</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- welcome screen -->
+        <div class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-content">
+                <h1>WELCOME, AGENT</h1>
+                <p class="tagline">Can you solve the puzzles and escape?</p>
+                <div class="start-container">
+                    <button class="start-button" id="startButton">START MISSION</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- main game section (hidden by default) -->
+        <div class="game-section" id="gameSection">
+            <div class="game-content">
+                <h1>MISSION IN PROGRESS</h1>
+
+                <!-- progress indicator -->
+                <div class="progress-display" id="progressDisplay">Level 1 of 2</div>
+
+                <!-- puzzle section -->
+                <div class="puzzle-section">
+                    <!-- dynamic puzzle title (will be updated by JS) -->
+                    <h2 id="puzzleTitle">Puzzle #1: The Encrypted Message</h2>
+
+                    <!-- dynamic puzzle description (will be updated by JS) -->
+                    <p class="puzzle-description" id="puzzleDescription">
+                        You've intercepted an encrypted message. The code reads: "IFMMP XPSME"
+                        <br><br>
+                        Hint: Each letter has been shifted by 1 position in the alphabet.
+                        <br><br>
+                        What is the decoded message?
+                    </p>
+
+                    <div class="input-container">
+                        <input
+                            type="text"
+                            class="input-box"
+                            id="puzzleInput"
+                            placeholder="Enter your answer..."
+                            autocomplete="off"
+                        >
+
+                        <button class="submit-button" id="submitButton">SUBMIT ANSWER</button>
+                    </div>
+
+                    <!-- feedback box -->
+                    <div class="feedback-box" id="feedbackBox"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- success screen (hidden by default) -->
+        <div class="success-screen" id="successScreen">
+            <div class="success-content">
+                <div class="success-icon">★</div>
+                <h1>MISSION COMPLETE</h1>
+                <p class="success-message">
+                    Congratulations, Agent!
+                    <br><br>
+                    You've successfully completed all puzzles and escaped the cyber trap.
+                    <br><br>
+                    Your skills in cryptography and problem-solving are exceptional.
+                </p>
+                <div class="restart-container">
+                    <button class="start-button" id="restartButton">RESTART MISSION</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

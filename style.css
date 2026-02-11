@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 100%);
+    color: #00ff00;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* HEADER LOGO  */
+.cyber-header {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #00ff00;
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #00ff00;
+    text-shadow: 0 0 15px #00ff00;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+}
+
+.logo-text {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: #00ff99;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+/* MAIN CONTAINER */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.welcome-screen {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 40px;
+    border: 2px solid #00ff00;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.welcome-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px #00ff00;
+    letter-spacing: 3px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #00ff99;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.start-container {
+    margin-top: 30px;
+}
+
+/* GAME SECTION */
+.game-section {
+    display: none;
+    width: 100%;
+    max-width: 750px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px 40px;
+    border: 2px solid #00ff00;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.game-content {
+    text-align: center;
+}
+
+.game-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px #00ff00;
+    letter-spacing: 2px;
+}
+
+/* progress indicator at top of game section */
+.progress-display {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #00ff99;
+    margin-bottom: 35px;
+    padding: 10px 20px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    border-radius: 6px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.puzzle-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px #00ff00;
+    letter-spacing: 1px;
+    color: #00ff00;
+}
+
+.puzzle-description {
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: #00ff99;
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* input container for better spacing */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.input-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 18px;
+    font-size: 1.05rem;
+    font-family: 'Courier New', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.input-box:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    border-color: #00ff99;
+}
+
+.input-box::placeholder {
+    color: rgba(0, 255, 0, 0.5);
+    text-align: center;
+}
+
+/* BUTTONS */
+.start-button,
+.submit-button {
+    background: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 14px 45px;
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.start-button:hover,
+.submit-button:hover {
+    background: #00ff00;
+    color: #0a0a14;
+    box-shadow: 0 0 25px #00ff00;
+    transform: translateY(-2px);
+}
+
+.start-button:active,
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* FEEDBACK BOX */
+.feedback-box {
+    margin-top: 30px;
+    padding: 18px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    letter-spacing: 1px;
+}
+
+/* green background for correct answers */
+.feedback-success {
+    background: rgba(0, 255, 0, 0.15);
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    animation: pulse 0.5s;
+    font-weight: bold;
+}
+
+/* red background for wrong answers */
+.feedback-error {
+    background: rgba(255, 0, 0, 0.15);
+    border: 2px solid #ff0000;
+    color: #ff3333;
+    animation: shake 0.5s;
+    font-weight: bold;
+}
+
+/* pulse animation for success */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* shake animation for errors */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.success-screen {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 40px;
+    border: 2px solid #00ff00;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.success-content {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #00ff00;
+    text-shadow: 0 0 20px #00ff00;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.success-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px #00ff00;
+    letter-spacing: 3px;
+}
+
+.success-message {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #00ff99;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.restart-container {
+    margin-top: 40px;
+}
+
+/* UTILITY CLASSES */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .cyber-header {
+        padding: 15px 0;
+    }
+
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+
+    .welcome-screen,
+    .game-section,
+    .success-screen {
+        padding: 40px 25px;
+    }
+
+    .welcome-content h1,
+    .success-content h1 {
+        font-size: 2rem;
+    }
+
+    .game-content h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .puzzle-description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .input-box {
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+
+    .start-button,
+    .submit-button {
+        padding: 12px 35px;
+        font-size: 1rem;
+    }
+}
