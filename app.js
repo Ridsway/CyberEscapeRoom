@@ -1,7 +1,7 @@
-// PUZZLE DATABASE
-// store all puzzles in one place - makes it easy to add more levels
-const puzzles = [
-    {
+// this file controls game flow, puzzle logic, user interaction
+
+const puzzles = [       // PUZZLE DB
+    {                                         // store all puzzles in an array so its easy to add more levels
         level: 1,
         title: "The Encrypted Message",
         description: `You've intercepted an encrypted message. The code reads: "IFMMP XPSME"
@@ -20,7 +20,7 @@ const puzzles = [
                      <br><br>
                      What does it say?`,
         answer: "HI"
-    }
+    },
 ];
 
 // GAME STATE
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // update progress indicator
         progressDisplay.textContent = `Level ${puzzle.level} of ${puzzles.length}`;
 
-        //
         // clear input box and feedback for fresh start
         puzzleInput.value = '';
         feedbackBox.textContent = '';
@@ -101,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // check if answer is correct
         if (answer === correctAnswer) {
-            showFeedback('✓ CORRECT! Access granted...', true);
+            showFeedback('✓ ACCESS GRANTED. Loading next level...', true);
 
             // wait before moving to next level (gives user time to read feedback)
             setTimeout(() => {
@@ -118,19 +117,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1500);
 
         } else {
-            // Wrong answer - show error message
-            showFeedback('✗ ACCESS DENIED. Try again...', false);
+            showFeedback('✗ ACCESS DENIED. Reattempt required...', false);
         }
     });
 
-    // EVENT: Restart game button
+    // EVENT: restart game button
     restartButton.addEventListener('click', () => {
         currentLevel = 0;
         successScreen.style.display = 'none';
         welcomeScreen.style.display = 'block';
     });
 
-    // EVENT: Press Enter to submit
+    // EVENT: press Enter to submit
     puzzleInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             submitButton.click();

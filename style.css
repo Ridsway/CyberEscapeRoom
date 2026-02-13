@@ -19,6 +19,7 @@ body {
     width: 100%;
     padding: 20px 0;
     background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     border-bottom: 2px solid #00ff00;
     box-shadow: 0 4px 20px rgba(0, 255, 0, 0.2);
     position: sticky;
@@ -109,6 +110,13 @@ body {
     letter-spacing: 2px;
 }
 
+.instructions {
+    color:#00ff99;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
 /* progress indicator at top of game section */
 .progress-display {
     text-align: center;
@@ -193,7 +201,6 @@ h2 {
     border-radius: 6px;
     letter-spacing: 2px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .start-button:hover,
